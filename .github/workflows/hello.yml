@@ -1,11 +1,17 @@
-name: Hello GitHub Actions
+name: Run on Windows
 
-on: push   # triggers when somebody pushes code
+on: push
 
 jobs:
-  demo_job:
-    runs-on: ubuntu-latest
+  windows_job:
+    runs-on: windows-latest
 
     steps:
-      - name: Print message
-        run: echo "Hello from GitHub Actions"
+      - name: Print Windows message
+        run: echo "Running on Windows runner!"
+
+      - name: Show directory
+        run: dir
+
+      - name: Show system info
+        run: systeminfo
